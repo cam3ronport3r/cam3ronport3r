@@ -46,14 +46,6 @@
   <img src="https://img.shields.io/badge/Obsidian-0A0A0A?style=for-the-badge&logo=obsidian&logoColor=D4AF37" alt="Obsidian">
 </p>
 
-## `$ ./snake --eat contributions`
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/cam3ronport3r/cam3ronport3r/output/snake-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/cam3ronport3r/cam3ronport3r/output/snake-light.svg">
-  <img alt="A gold snake eating my contribution graph" src="https://raw.githubusercontent.com/cam3ronport3r/cam3ronport3r/output/snake-dark.svg">
-</picture>
-
 ```console
 $ uptime
 bots online 24/7 · picks graded every night · everything backed up every morning
