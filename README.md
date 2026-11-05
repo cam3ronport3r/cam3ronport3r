@@ -1,4 +1,12 @@
 <p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/cam3ronport3r/cam3ronport3r/output/snake-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/cam3ronport3r/cam3ronport3r/output/snake-light.svg">
+    <img alt="A gold snake eating my contribution graph" src="https://raw.githubusercontent.com/cam3ronport3r/cam3ronport3r/output/snake-dark.svg" width="100%">
+  </picture>
+</p>
+
+<p align="center">
   <img src="assets/terminal.svg" width="100%" alt="cam3ronport3r: founder of Vigless, building bots and models that hunt for edges. Process over picks.">
 </p>
 

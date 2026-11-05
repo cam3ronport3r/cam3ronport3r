@@ -1,0 +1,36 @@
+# Draws a snake eating the contribution graph (Vigless colours: gold snake, green squares).
+# Runs once a day, on every push to main, and on demand from the Actions tab.
+# The pictures land on the "output" branch; the README shows them from there.
+name: snake
+
+on:
+  schedule:
+    - cron: "17 6 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  snake:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Draw the snake
+        uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/snake-light.svg?color_snake=#D4AF37&color_dots=#ebedf0,#b3f0dc,#5fdcb5,#00c896,#008f6b
+            dist/snake-dark.svg?palette=github-dark&color_snake=#D4AF37&color_dots=#161b22,#0b3d30,#08705a,#00a87e,#00c896
+
+      - name: Publish it to the output branch
+        uses: crazy-max/ghaction-github-pages@v4
+        with:
+          target_branch: output
+          build_dir: dist
+          commit_message: Redraw the snake
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
